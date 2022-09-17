@@ -1,5 +1,6 @@
 package aula_1;
 
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -32,6 +33,25 @@ public class Ordenacao {
         }
     }
 
+    static int buscaBinaria(int x, int v[]) {
+        //devolver uma posição onde x aparece ou -1 caso não seja encontrado o valor.
+        int ini = 0;
+        int fim = v.length - 1;
+
+        while (ini <= fim) {
+            int meio = (ini + fim) / 2;
+            System.out.println("ini: " + ini + " fim: " + fim + " meio: " + meio);
+            if(v[meio] == x )
+                return meio;
+            if(x > v[meio])
+                ini = meio + 1;
+            else
+                fim = meio - 1;
+        }
+        System.out.println("ini: " + ini + " fim: " + fim);
+        return -1;
+    }
+
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         random = new Random();
@@ -44,9 +64,23 @@ public class Ordenacao {
             if(n > 0) {
                 int[] v = new int[n];
                 geraVetor(v);
-                exibeVetor(v, "Vetor gerado.");
+
+                long ini = new Date().getTime();
+//                exibeVetor(v, "Vetor gerado.");
                 bubble(v);
-                exibeVetor(v, "Vetor ordenado");
+                long fim = new Date().getTime();
+                System.out.println("Para o vetor tamanho " + n + " o bubble demorou " + (fim - ini) + " milissegundos" +
+                        ".");
+                System.out.print("Digite um valor para a busca: ");
+                int x = scanner.nextInt();
+
+                int posicao = buscaBinaria(x, v);
+                if (posicao < 0) {
+                    System.out.println(x + " não aparece no vetor.");
+                } else {
+                    System.out.println(x + "aparece na posição: " + posicao);
+                }
+//                exibeVetor(v, "Vetor ordenado");
             }
         } while(n > 0);
     }
