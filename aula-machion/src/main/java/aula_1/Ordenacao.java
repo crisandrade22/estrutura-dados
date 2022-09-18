@@ -34,6 +34,7 @@ public class Ordenacao {
     }
 
     static int buscaBinaria(int x, int v[]) {
+
         //devolver uma posição onde x aparece ou -1 caso não seja encontrado o valor.
         int ini = 0;
         int fim = v.length - 1;

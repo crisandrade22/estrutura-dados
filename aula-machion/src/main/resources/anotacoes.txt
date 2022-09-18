@@ -35,3 +35,6 @@ Bubblesort
             }
         }
     }
+
+Aula do dia 17/09/2022
+Prova será no dia 08/10/2022
