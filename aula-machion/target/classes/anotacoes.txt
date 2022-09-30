@@ -38,3 +38,6 @@ Bubblesort
 
 Aula do dia 17/09/2022
 Prova será no dia 08/10/2022
+
+Aula do dia 24/09/2022
+
