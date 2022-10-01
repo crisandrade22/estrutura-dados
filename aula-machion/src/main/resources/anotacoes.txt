@@ -41,3 +41,13 @@ Prova será no dia 08/10/2022
 
 Aula do dia 24/09/2022
 
+Aula do dia 01/10/2022
+A prova será no estilo de maratona em dupla, vai cair conteúdo antes de recursão.
+
+Recursão: é a chamada de um procedimento por ele mesmo. Uma
+recursão causa a repetição de um conjunto de instruções, assim como um laço.
+
+Assim como um laço, uma repetição precisa de uma condição de parada.
+
+prova --> ordenação, pilha, vetores
+    Teste de mesa em relação a ordenação, não precisa decorar os algorítmos.
