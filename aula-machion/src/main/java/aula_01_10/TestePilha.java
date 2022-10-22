@@ -28,7 +28,7 @@ public class TestePilha {
             System.out.println(pilha);
         }
 
-        System.out.println("Peek: " + pilha.peek());
+        System.out.println("Peek: " + pilha.elementoTopo());
 
         while(!pilha.estaVazia()) {
             System.out.println(pilha.pop());

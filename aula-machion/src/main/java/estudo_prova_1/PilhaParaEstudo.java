@@ -1,10 +1,10 @@
-package aula_24_09;
+package estudo_prova_1;
 
-public class Pilha {
+public class PilhaParaEstudo {
     private int topo;
     private int[] dados;
 
-    public Pilha(int capacidade) {
+    public PilhaParaEstudo(int capacidade) {
         this.topo = 0;
         this.dados = new int[capacidade];
     }
@@ -17,21 +17,25 @@ public class Pilha {
         return this.topo == dados.length;
     }
 
-    public void push(int novo) {
-        this.dados[this.topo++] = novo;
+    public void push(int numero) {
+        this.dados[this.topo++] = numero;
     }
 
-    public int pop () {
+    public int pop() {
         return this.dados[--this.topo];
     }
 
-    public int peek () {
-        return this.dados[this.topo-1];
+    public int peek() {
+        return this.topo--;
+    }
+
+    public int tamanhoPilha() {
+        return this.topo;
     }
 
     @Override
     public String toString() {
-        String s = "pilha: ";
+        String s = "";
         if(this.estaVazia()) {
             s = s + " está vazia.";
         } else {
@@ -39,8 +43,6 @@ public class Pilha {
                 s = s + this.dados[i] + " ";
             }
         }
-        s = s + "\n";
         return s;
     }
-
 }
